@@ -1,0 +1,26 @@
+type Film {
+    title: String
+    release_date: String
+    opening_crawl: String
+}
+
+type Species {
+    name: String
+}
+
+type Planet {
+    name: String
+}
+
+type Person {
+    name: String!
+    films: [Film],
+    homeworld: Planet,
+}
+type Query {
+    getPeopleByName(name: String!): [Person]
+}
+
+schema {
+    query: Query
+}

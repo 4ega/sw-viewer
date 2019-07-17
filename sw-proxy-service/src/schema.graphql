@@ -10,13 +10,16 @@ type Species {
 
 type Planet {
     name: String
+    population: String
 }
 
 type Person {
     name: String!
     films: [Film],
+    species: [Species],
     homeworld: Planet,
 }
+
 type Query {
     getPeopleByName(name: String!): [Person]
 }
